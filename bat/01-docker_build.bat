@@ -1,0 +1,1 @@
+docker build morozovav/health:1.0 .
