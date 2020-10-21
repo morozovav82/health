@@ -1,1 +1,1 @@
-docker build morozovav/health:1.0 .
+docker build -t morozovav82/health:1.1 .

@@ -14,7 +14,19 @@ spec:
        spec:
           containers:
           - name: health
-            image: morozovav/health:1.0
+            image: morozovav82/health:1.1
             ports:
               - name: web 
                 containerPort: 8000
+            livenessProbe:
+              httpGet:
+                port: 8000
+                path: /livenessProbe
+              initialDelaySeconds: 10
+              periodSeconds: 5
+            readinessProbe:
+              httpGet:
+                port: 8000
+                path: /readinessProbe
+              initialDelaySeconds: 10
+              periodSeconds: 5
